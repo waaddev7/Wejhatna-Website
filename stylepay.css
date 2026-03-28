@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #6f8c4c;
+    --text-dark: #1d1d42;
+    --text-light: #8c8ca1;
+    --bg-left: #fbfbf8;
+    --bg-right: #f6f7fe;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9eef5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 950px;
+    max-width: 100%;
+    background-color: var(--bg-left);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+/* --- قسم ملخص الدفع (اليسار) --- */
+.payment-summary {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.payment-summary h1 {
+    color: var(--text-dark);
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.trip-details {
+    margin-bottom: 30px;
+}
+
+.amount-details {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eef0f4;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+.detail-row span:last-child {
+    font-weight: 500;
+    color: #555;
+}
+
+.detail-row.total {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.detail-row.total span:last-child {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.remember-card {
+    display: flex;
+    align-items: center;
+}
+
+.remember-card label {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+input[type="checkbox"] {
+    width: 1.1em;
+    height: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.credit-card-promo-img {
+    display: block;
+    width: 80%;
+    max-width: 250px;
+    margin: 30px auto 0;
+    opacity: 0.8;
+}
+
+/* --- قسم تفاصيل البطاقة (اليمين) --- */
+.card-details {
+    width: 50%;
+    padding: 40px;
+    background-color: var(--bg-right);
+    box-sizing: border-box;
+    border-radius: 20px 0 0 20px;
+}
+
+.card-details h2 {
+    color: var(--text-dark);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-light);
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #d4d7e1;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+
+::placeholder {
+    color: #c0c2d3;
+    font-weight: 400;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.select-group {
+    display: flex;
+    gap: 10px;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238c8ca1'%3E%3Cpath d='M6 9.25a.75.75 0 01-.53-.22l-3-3a.75.75 0 111.06-1.06L6 7.94l2.47-2.47a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-.53.22z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 20px;
+}
+
+.pay-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+
+.pay-button:hover {
+    opacity: 0.9;
+}
+
+/* --- ▼▼▼ هذا هو الكود الجديد الذي تمت إضافته ▼▼▼ --- */
+/* --- Styles for the new Phone Number Input --- */
+.phone-input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d4d7e1;
+    transition: border-bottom-color 0.2s ease-in-out;
+}
+
+/* تغيير لون الخط السفلي للمجموعة كلها عند التركيز على حقل الإدخال */
+.phone-input-group:focus-within {
+    border-bottom-color: var(--primary-color);
+}
+
+.phone-prefix {
+    padding: 10px 10px 10px 0;
+    font-size: 16px;
+    color: #888;
+    font-weight: 500;
+}
+
+/* إزالة الخط السفلي من حقل الإدخال نفسه لأنه موجود الآن على المجموعة */
+.phone-input-group input[type="tel"] {
+    border: none;
+    padding-left: 5px; /* مسافة بسيطة بعد البادئة */
+}
+
+/* التأكد من أن حقل الإدخال داخل المجموعة لا يحصل على تركيز منفصل */
+.phone-input-group input[type="tel"]:focus {
+    outline: none;
+    border-bottom-color: transparent; /* إخفاء الخط السفلي عند التركيز */
+}
+/* --- ▲▲▲ نهاية الكود الجديد ▲▲▲ --- */

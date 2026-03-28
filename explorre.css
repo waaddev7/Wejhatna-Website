@@ -1,0 +1,72 @@
+:root {
+    --primary-font: 'Roboto', sans-serif; /* Changed Font */
+    --text-light: #ffffff;
+    --text-dark: #333;
+}
+body { font-family: var(--primary-font); margin: 0; background-color: #1a1a1a; color: var(--text-light); overflow: hidden; }
+.hero-section { position: relative; height: 100vh; background-size: cover; background-position: center; transition: background-image 0.8s ease-in-out; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.7) 20%, transparent 80%); z-index: 1; } /* Adjusted overlay for better text readability */
+
+/* Back Button (Adjusted for LTR) */
+.back-btn {
+    position: absolute; top: 2rem; right: 2rem; color: var(--text-light); text-decoration: none;
+    font-size: 1rem; font-weight: 700; padding: 0.5rem 1rem; border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px; transition: background-color 0.3s; z-index: 10;
+}
+.back-btn i { margin-right: 0.5rem; }
+.back-btn:hover { background-color: rgba(255, 255, 255, 0.1); }
+
+/* Hero Content (Adjusted) */
+.hero-content {
+    position: absolute; top: 50%; left: 5rem; transform: translateY(-50%);
+    max-width: 500px; text-align: left; z-index: 5;
+}
+.hero-subtitle { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+.hero-title { font-size: 5rem; font-weight: 900; margin: 0.5rem 0; line-height: 1.1; }
+.hero-description { font-size: 1.1rem; max-width: 450px; line-height: 1.6; margin-bottom: 1.5rem; }
+
+/* --- NEW STYLES FOR DATE & FEEDBACK --- */
+.trip-meta {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    background-color: rgba(0,0,0,0.3);
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+}
+.feedback-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 0.5rem;
+}
+.feedback-list {
+    max-height: 150px; /* Limit height */
+    overflow-y: auto;  /* Add scroll if content exceeds height */
+    padding-right: 10px; /* Space for scrollbar */
+}
+.feedback-item {
+    margin-bottom: 1rem;
+}
+.feedback-item p {
+    margin: 0;
+    font-style: italic;
+    color: #ddd;
+}
+.feedback-item span {
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* --- SLIDER (Adjusted) --- */
+.slider-wrapper { position: absolute; bottom: 2rem; right: 5rem; display: flex; align-items: flex-end; gap: 1.5rem; z-index: 5; }
+.slider-controls button { background-color: rgba(255, 255, 255, 0.2); border: 1px solid var(--text-light); color: var(--text-light); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; margin: 0 0.25rem; transition: background-color 0.3s; }
+.slider-controls button:hover { background-color: rgba(255, 255, 255, 0.4); }
+.slider-container { display: flex; gap: 1rem; }
+.trip-card { width: 180px; height: 250px; border-radius: 15px; overflow: hidden; position: relative; cursor: pointer; border: 3px solid transparent; transition: all 0.4s ease; flex-shrink: 0; }
+.trip-card.active { border-color: var(--text-light); transform: scale(1.05); }
+.trip-card img { width: 100%; height: 100%; object-fit: cover; }
+.card-overlay { position: absolute; bottom: 0; right: 0; left: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); text-align: left; }
+.card-title { font-weight: 700; font-size: 1rem; margin: 0; }
+.slide-counter { font-size: 2rem; font-weight: 900; }

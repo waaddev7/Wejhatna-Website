@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Changed to English -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details</title> <!-- Changed to English -->
+    <link rel="stylesheet" href="explorre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="hero-section">
+    <div class="hero-overlay"></div>
+
+    <a href="javascript:history.back()" class="back-btn">
+        <i class="fas fa-arrow-right"></i> BACK <!-- Changed Arrow and Text -->
+    </a>
+
+    <div class="hero-content">
+        <p class="hero-subtitle">Trip Location</p>
+        <h1 class="hero-title">Trip Name</h1>
+        <p class="hero-description">A detailed description of the journey and its highlights.</p>
+
+        <!-- *** NEW SECTION FOR DATE AND FEEDBACK *** -->
+        <div class="trip-meta">
+            <span class="trip-date"></span>
+        </div>
+        <div class="feedback-section">
+            <h4>Feedback from Travelers</h4>
+            <div class="feedback-list">
+                <!-- Feedback will be inserted here by JS -->
+            </div>
+        </div>
+        <!-- *** END OF NEW SECTION *** -->
+    </div>
+
+    <div class="slider-wrapper">
+        <div class="slider-controls">
+            <button id="prev-btn"><i class="fas fa-chevron-left"></i></button> <!-- Changed Arrow Direction -->
+            <button id="next-btn"><i class="fas fa-chevron-right"></i></button> <!-- Changed Arrow Direction -->
+        </div>
+        <div class="slider-container">
+            <!-- Cards will be inserted here by JS -->
+        </div>
+        <div class="slide-counter">
+            <span id="current-slide-number">01</span>
+        </div>
+    </div>
+</main>
+
+<script src="explorre.js"></script>
+</body>
+</html>
